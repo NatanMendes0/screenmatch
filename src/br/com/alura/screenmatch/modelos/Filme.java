@@ -1,6 +1,8 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Filme extends Titulo {
+import br.com.alura.screenmatch.calculos.Classificavel;
+
+public class Filme extends Titulo implements Classificavel {
     //"extends" significa que qualquer filme possui os elementos de um titulo
 
     private String diretor;
@@ -11,5 +13,15 @@ public class Filme extends Titulo {
 
     public void setDiretor(String diretor) {
         this.diretor = diretor;
+    }
+
+    @Override
+    public int getClassificacao() {
+        return (int) pegaMedia()/2;
+    }
+
+    @Override
+    public String toString() {
+        return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento()+ ")";
     }
 }
