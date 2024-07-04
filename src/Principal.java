@@ -11,9 +11,8 @@ public class Principal {
 
     public static void main(String[] args) {
         System.out.println("Começando no Java: ");
-        Filme meuFilme = new Filme();
+        Filme meuFilme = new Filme("O poderoso chefão");
 
-        meuFilme.setNome("O poderoso chefão");
         meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
 
@@ -29,9 +28,8 @@ public class Principal {
         lost.setMinutosPorEpisodio(50);
         System.out.println("A duração para maratonar a série Lost no objeto lost é: " + lost.getDuracaoEmMinutos() + " minutos");
 
-        Filme outroFilme = new Filme();
+        Filme outroFilme = new Filme("Avatar");
 
-        outroFilme.setNome("Avatar");
         outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
 
@@ -60,8 +58,7 @@ public class Principal {
         * contanto que recebam um valor na mesma linha!
         */
 
-        var filmeDoPaulo = new Filme();
-        filmeDoPaulo.setNome("Dogville");
+        var filmeDoPaulo = new Filme("Dogville");
         filmeDoPaulo.setDuracaoEmMinutos(200);
         filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
@@ -74,6 +71,8 @@ public class Principal {
         System.out.println("Primeiro filme da lista: " + listaDeFIlmes.get(0).getNome());
         System.out.println(listaDeFIlmes);
         System.out.println("toString do filme, após sobrescrita: " + listaDeFIlmes.get(0).toString());
+
+
     }
 
 }

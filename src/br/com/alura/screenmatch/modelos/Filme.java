@@ -7,10 +7,16 @@ public class Filme extends Titulo implements Classificavel {
 
     private String diretor;
 
+    //construtor que aguarda por uma string como parametro na iniciação de um objeto
+    public Filme(String nome) {
+        this.setNome(nome);
+    }
+
     public String getDiretor() {
         return diretor;
     }
 
+    //metodo setter que modifica o valor do atributo diretor
     public void setDiretor(String diretor) {
         this.diretor = diretor;
     }
