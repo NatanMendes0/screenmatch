@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -11,26 +13,20 @@ public class Principal {
 
     public static void main(String[] args) {
         System.out.println("Começando no Java: ");
-        Filme meuFilme = new Filme("O poderoso chefão");
-
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O poderoso chefão", 1970);
         meuFilme.setDuracaoEmMinutos(180);
 
         System.out.println("A duração do filme, presente no objeto meuFilme é: " + meuFilme.getDuracaoEmMinutos() + " minutos");
 
-        Serie lost = new Serie();
-
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
         System.out.println("A duração para maratonar a série Lost no objeto lost é: " + lost.getDuracaoEmMinutos() + " minutos");
 
-        Filme outroFilme = new Filme("Avatar");
+        Filme outroFilme = new Filme("Avatar", 2023);
 
-        outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
 
         System.out.println("\nTrabalhando com dois objetos:\n");
@@ -58,9 +54,8 @@ public class Principal {
         * contanto que recebam um valor na mesma linha!
         */
 
-        var filmeDoPaulo = new Filme("Dogville");
+        var filmeDoPaulo = new Filme("Dogville", 2003);
         filmeDoPaulo.setDuracaoEmMinutos(200);
-        filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
 
         ArrayList<Filme> listaDeFIlmes = new ArrayList<>();
