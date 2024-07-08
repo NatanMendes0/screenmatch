@@ -4,7 +4,9 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
+//pacotes java.util
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -48,5 +50,18 @@ public class PrincipalComListas {
 //        exemplo 3
 //        lista.forEach(System.out::println);
 
+        //Ordenar string alfabeticamente com o Comparable
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Paulo");
+        buscaPorArtista.add("Jacqueline");
+
+        Collections.sort(buscaPorArtista); //ordena a lista alfabeticamente
+
+        System.out.println("Depois da ordenação do arraylist buscaPorArtistas");
+        System.out.println(buscaPorArtista);
+        System.out.println("Lista de títulos ordenados");
+        Collections.sort(lista );
+        System.out.println(lista);
     }
 }
